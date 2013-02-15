@@ -18,8 +18,8 @@ class HelloServlet extends HttpServlet {
       case _ => "Qualcuno!"
     }
     val out = res.getWriter()
-    out.println(toHtml(user).toString())
-
+    //out.println(toHtml(user).toString())
+    out.println(templates.Home(user).toString())
   }
 
   // basic template! :-)
